@@ -1,0 +1,13 @@
+  <<: *defaults  <<: *defaults  <<: *defaultsdevelopment:
+  
+  database: healthub_development
+
+test:
+  <<: *defaults
+  database: healthub_test
+
+
+production:
+  <<: *defaults
+  database: healthub_production
+

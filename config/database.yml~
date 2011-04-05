@@ -1,0 +1,20 @@
+defaults: &defaults
+  adapter: postgres
+#  encoding: utf8
+  username: ang
+  password: ehr
+  host: localhost
+
+development:
+  <<: *defaults
+  database: healthub_development
+
+test:
+  <<: *defaults
+  database: healthub_test
+
+
+production:
+  <<: *defaults
+  database: healthub_production
+

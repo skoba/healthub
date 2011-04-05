@@ -1,0 +1,18 @@
+development:
+  database: healthub_development
+  adapter: postgres
+  username: ang
+  passowrd: ehr
+
+test:
+  database: healthub_test
+  adapter: postgres
+  username: ang
+  password: ehr
+
+production:
+  database: healthub_production
+  adapter: postgres
+  username: ang
+  password: ehr
+
