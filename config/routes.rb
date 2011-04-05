@@ -1,4 +1,8 @@
 Healthub::Application.routes.draw do
+  # resource :people do
+  #   get "people/index"
+  # get "people/show"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

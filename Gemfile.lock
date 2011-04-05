@@ -90,6 +90,12 @@ GEM
       guard (>= 0.2.2)
       sfl (= 1.2)
       spork (>= 0.8.4)
+    haml (3.0.25)
+    haml-rails (0.3.4)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      haml (~> 3.0)
+      railties (~> 3.0)
     i18n (0.5.0)
     jquery-rails (0.2.7)
       rails (~> 3.0)
@@ -120,6 +126,8 @@ GEM
       activesupport (= 3.0.5)
       bundler (~> 1.0)
       railties (= 3.0.5)
+    rails3-generators (0.17.4)
+      railties (>= 3.0.0)
     railties (3.0.5)
       actionpack (= 3.0.5)
       activesupport (= 3.0.5)
@@ -168,7 +176,9 @@ DEPENDENCIES
   dm-validations
   guard-rspec
   guard-spork
+  haml-rails
   jquery-rails
+  rails3-generators
   railties
   rspec
   rspec-rails

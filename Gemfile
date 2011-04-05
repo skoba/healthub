@@ -11,6 +11,7 @@ gem 'railties' #,           RAILS_VERSION, :require => 'rails'
 gem 'dm-rails' #,          '~> 1.1.0'
 gem 'dm-postgres-adapter'#, DM_VERSION
 gem 'jquery-rails'
+gem 'haml-rails'
 
 # You can use any of the other available database adapters.
 # This is only a small excerpt of the list of all available adapters
@@ -35,6 +36,7 @@ gem 'dm-transactions' #,      DM_VERSION
 gem 'dm-aggregates' #,        DM_VERSION
 gem 'dm-timestamps' #,        DM_VERSION
 gem 'dm-observer' #,          DM_VERSION
+gem 'rails3-generators'
 
 group(:development, :test) do
   gem 'spork', '>=0.9.0.rc2'
@@ -44,7 +46,7 @@ group(:development, :test) do
   gem 'guard-rspec'
   gem 'guard-spork'
 #  gem 'factory_girl_rails'
-#  gem 'rails3-generators'
+
 #  gem 'metric_fu'
   # gem 'rails_metrics', '~> 0.1', :git => 'git://github.com/engineyard/rails_metrics'
 

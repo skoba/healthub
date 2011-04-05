@@ -7,8 +7,5 @@ class Person
   property :familyName, String
   property :givenName, String
 
-  validates_presence_of :familyName
-  validates_presence_of :givenName
-  
-#  validates :faminyName :presence => true
+  validates_presence_of :familyName, :givenName
 end
