@@ -44,6 +44,7 @@ group(:development, :test) do
   gem 'rspec-rails'
   gem 'autotest-rails'
   gem 'guard-rspec'
+  gem 'rb-fsevent'
   gem 'guard-spork'
 #  gem 'factory_girl_rails'
 
