@@ -1,18 +1,17 @@
+default: &default
+  adapter: postgres
+  encoding: utf8
+  username: ang
+  password: ehr
+
 development:
   database: healthub_development
-  adapter: postgres
-  username: ang
-  passowrd: ehr
+  <<: *default
 
 test:
   database: healthub_test
-  adapter: postgres
-  username: ang
-  password: ehr
+  <<: *default
 
 production:
   database: healthub_production
-  adapter: postgres
-  username: ang
-  password: ehr
-
+  <<: *default

@@ -46,10 +46,9 @@ group(:development, :test) do
   gem 'guard-rspec'
   gem 'rb-fsevent'
   gem 'guard-spork'
-#  gem 'factory_girl_rails'
-
-#  gem 'metric_fu'
+  gem 'factory_girl_rails'
+  gem 'metric_fu'
+  gem 'capybara'
   # gem 'rails_metrics', '~> 0.1', :git => 'git://github.com/engineyard/rails_metrics'
-
 end
 
