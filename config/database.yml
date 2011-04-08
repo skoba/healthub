@@ -1,17 +1,23 @@
-default: &default
+development:
   adapter: postgres
   encoding: utf8
   username: ang
   password: ehr
-
-development:
+  host: localhost
   database: healthub_development
-  <<: *default
 
 test:
+  adapter: postgres
+  encoding: utf8
+  username: ang
+  password: ehr
+  host: localhost
   database: healthub_test
-  <<: *default
 
-production:
+production: 
   database: healthub_production
-  <<: *default
+  adapter: postgres
+  encoding: utf8
+  username: ang
+  password: ehr
+  host: localhost

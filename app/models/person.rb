@@ -4,8 +4,8 @@ class Person
 
   property :id, Serial
 
-  property :familyName, String
-  property :givenName, String
+  property :family_name, String
+  property :given_name, String
 
-  validates_presence_of :familyName, :givenName
+  validates_presence_of :family_name, :given_name
 end

@@ -1,6 +1,8 @@
 require 'rubygems'
 require 'spork'
-require 'capybara/rails'
+#require 'capybara/rails'
+#require 'factory_girl'
+#Factory.find_definitions
 
 Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However, 
@@ -30,12 +32,25 @@ Spork.prefork do
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, remove the following line or assign false
   # instead of true.
-    #config.use_transactional_fixtures = true
+    #config.use_transactional_fixtures = false
+
+    #config.use_transactional_fixtures = false # for selenium
+
+    # config.before(:suite) do
+    #   DatabaseCleaner.strategy = :truncation
+    # end
+    
+    # config.before(:each) do
+    #   DatabaseCleaner.start
+    # end
+    
+    # config.after(:each) do
+    #   DatabaseCleaner.clean
+    # end
   end
 
 #  ActiveSupport::Dependencies.clear
 #  ActiveRecord::Base.instantiate_observers
-
 end
 
 Spork.each_run do

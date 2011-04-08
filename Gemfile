@@ -36,7 +36,6 @@ gem 'dm-transactions' #,      DM_VERSION
 gem 'dm-aggregates' #,        DM_VERSION
 gem 'dm-timestamps' #,        DM_VERSION
 gem 'dm-observer' #,          DM_VERSION
-gem 'rails3-generators'
 
 group(:development, :test) do
   gem 'spork', '>=0.9.0.rc2'
@@ -46,9 +45,13 @@ group(:development, :test) do
   gem 'guard-rspec'
   gem 'rb-fsevent'
   gem 'guard-spork'
-  gem 'factory_girl_rails'
+#  gem 'factory_girl_rails'
+  gem 'fabrication'
   gem 'metric_fu'
   gem 'capybara'
+  gem 'rails3-generators'
+  gem 'forgery'
+  gem 'database_cleaner'
   # gem 'rails_metrics', '~> 0.1', :git => 'git://github.com/engineyard/rails_metrics'
 end
 

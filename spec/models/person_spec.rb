@@ -2,20 +2,21 @@ require 'spec_helper'
 
 describe Person do
   before do
-    @person = Person.new(:familyName => 'KOBAYASHI', :givenName => 'Shinji')
+    @person = Fabricate(:person)
   end
 
   context 'mandatory field validation' do
-    subject{@person}
-    it {should be_valid}
+    it 'filled mandatory field' do
+      @person.should be_valid
+    end
 
     it 'familyName is mandatory' do
-      @person.familyName = nil
+      @person.family_name = nil
       @person.should_not be_valid
     end
 
     it 'givenName is mandatory' do
-      @person.givenName = ''
+      @person.given_name = ''
       @person.should_not be_valid 
     end 
   end 

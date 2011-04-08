@@ -1,6 +1,6 @@
 defaults: &defaults
   adapter: postgres
-#  encoding: utf8
+  encoding: utf8
   username: ang
   password: ehr
   host: localhost
@@ -13,8 +13,6 @@ test:
   <<: *defaults
   database: healthub_test
 
-
 production:
   <<: *defaults
   database: healthub_production
-

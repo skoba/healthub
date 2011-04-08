@@ -45,6 +45,14 @@ module Healthub
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
 
+    # Configure generators
+    config.generators do |g|
+      g.template_engine :haml
+      g.test_framework :rspec, :fixture => true
+#      g.fixture_replacement :factory_girl, :dir => "spec/factories"
+      g.fixture_replacement :fabrication, :dir => "spec/fabricators"
+    end
+
     ### Part of a Spork hack. See http://bit.ly/arY19y
     if Rails.env.test? && defined?(Spork) && Spork.using_spork?
       initializer :after => :initialize_dependency_mechanism do
