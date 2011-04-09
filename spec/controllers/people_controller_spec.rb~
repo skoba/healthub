@@ -1,0 +1,36 @@
+require 'spec_helper'
+
+describe PeopleController do
+
+  describe "GET 'index'" do
+    before do
+      Person.destroy!
+      @person = Factory.build(:person)
+      get 'index'
+    end
+
+    it "should be successful" do
+      get 'index'
+      response.should be_success
+    end      
+
+    it 'should have valid factory' do
+      @person.should be_valid
+    end
+
+    it 'factory should assigned properly' do
+      @person.familyName.should == 'KOBAYASHI'
+    end
+
+    it 'should return valid people' do
+      assigns[:people].should =~ [@person]
+    end
+  end
+
+  describe "GET 'show'" do
+    it "should be successful" do
+      get 'show'
+      response.should be_success
+    end
+  end
+end

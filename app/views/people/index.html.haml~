@@ -1,0 +1,9 @@
+%h1 Healhub people list
+%table
+  %th Person
+  - for person in @people
+    %tr
+      %td= person.familyName
+      %td= person.givenName
+      %td= link_to 'Show', person
+      %td= Time.now.to_s

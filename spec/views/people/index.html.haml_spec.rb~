@@ -1,0 +1,14 @@
+require 'spec_helper'
+
+describe "people/index.html.haml" do
+  describe 'GET index' do
+    before do
+      render
+    end
+    context 'ihdex page shows valid' do
+      it 'valid title should be shown' do
+        rendered.should =~ /People list/
+      end
+    end
+  end
+end
