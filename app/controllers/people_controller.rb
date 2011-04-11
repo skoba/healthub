@@ -34,7 +34,6 @@ class PeopleController < ApplicationController
 
   def update
     @person = Person.get(params[:id])
-
     if @person.update(params[:person])
       redirect_to(@person, :notice => 'Person was successfully updated')
     else
@@ -45,6 +44,6 @@ class PeopleController < ApplicationController
   def destroy
     @person = Person.get(params[:id])
     @person.destroy
-    respond_with(redirect_to(people_url))
+    redirect_to people_url
   end
 end

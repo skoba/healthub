@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe 'route around people' do
+
   context 'get index' do
     subject {{:get => 'people/index'}}
     it {should route_to(:controller => 'people',
@@ -14,7 +15,7 @@ describe 'route around people' do
   end
 
   context 'get show' do
-    subject {{:get => 'people/show}'}
+    subject {{:get => 'people/show}'}}
     it {should route_to(:controller => 'people',
                         :action => 'show')}
   end
