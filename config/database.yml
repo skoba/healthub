@@ -1,23 +1,23 @@
 development:
+  database: healthub_development
   adapter: postgres
-  encoding: utf8
+  encoding: unicode
   username: ang
   password: ehr
   host: localhost
-  database: healthub_development
 
 test:
+  database: healthub_test
   adapter: postgres
-  encoding: utf8
+  encoding: unicode
   username: ang
   password: ehr
   host: localhost
-  database: healthub_test
 
 production: 
   database: healthub_production
   adapter: postgres
-  encoding: utf8
+  encoding: unicode
   username: ang
   password: ehr
   host: localhost
