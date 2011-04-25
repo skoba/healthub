@@ -1,4 +1,4 @@
-guard 'spork', :cucumber_env => { 'RAILS_ENV' => 'cucumber' }, :rspec_env => { 'RAILS_ENV' => 'test' } do
+guard 'spork', :rspec_env => { 'RAILS_ENV' => 'test' } do
   watch('config/application.rb')
   watch('config/environment.rb')
   watch(%r{^config/environments/.+\.rb$})
@@ -6,11 +6,10 @@ guard 'spork', :cucumber_env => { 'RAILS_ENV' => 'cucumber' }, :rspec_env => { '
   watch('spec/spec_helper.rb')
 end
 
-guard 'rspec' do
+guard 'rspec', :notification => true do
   watch(%r{^spec/.+_spec\.rb})
   watch(%r{^lib/(.+)\.rb})     { |m| "spec/lib/#{m[1]}_spec.rb" }
-  watch('spec/spec_helper.rb') { "spec" }
-  
+  watch('spec/spec_helper.rb') { "spec" }  
   # Rails example
   watch('spec/spec_helper.rb')                       { "spec" }
   watch('config/routes.rb')                          { "spec/routing" }

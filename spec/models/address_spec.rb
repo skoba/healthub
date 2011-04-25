@@ -1,5 +1,12 @@
 require 'spec_helper'
 
 describe Address do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  before do
+    @address = Fabricate(:address)
+  end
+
+  it 'create valid instance' do
+    @address.should be_valid
+  end
 end

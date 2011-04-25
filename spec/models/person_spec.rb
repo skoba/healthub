@@ -17,7 +17,7 @@ describe Person do
 
     it 'givenName is mandatory' do
       @person.given_name = ''
-      @person.should_not be_valid 
-    end 
+      @person.should_not be_valid
+    end
   end 
 end

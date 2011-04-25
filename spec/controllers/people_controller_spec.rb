@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe PeopleController do
 
-  before(:each) do
+  before(:all) do
     Person.destroy
     @people = []
     10.times {@people << Fabricate(:person)}
@@ -59,14 +59,15 @@ describe PeopleController do
 
   describe 'edit' do
     before do
-      get 'edit', :id => @people.first
+      get 'edit', :id => @people.first.id
     end
 
     it 'response properly' do
       response.should be_success
     end
+
     it 'gives proper person instance' do
-      assigns[:person].should == @people.first
+      assigns[:person].id.should == @people.first.id
     end
   end
 end
